@@ -4,6 +4,8 @@ console.log(range(1, 10));
 // → [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 console.log(range(5, 2, -1));
 // → [5, 4, 3, 2]
+console.log(range(1, 10, 2));
+
 console.log(sum(range(1, 10)));
 // → 55
 
@@ -17,8 +19,8 @@ function range(a, b, s=1) {
     return arr;
   };
   
-  // console.log(range(1, 10, 2));
   
+  // sum calculation using 3 different ways to loop over the array
   function sum(arr){
     return arr.reduce((total, item) => total + item, 0)
   }
@@ -39,8 +41,10 @@ function range(a, b, s=1) {
     return total;
   }
   
+  
   // arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   
+  // show run time
   arr = range(1,10000000);
   console.time('method');
   console.log(sum(arr));
